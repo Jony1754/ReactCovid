@@ -27,3 +27,33 @@
     }
   }
 }
+
+@media screen and (max-width: 412px) {
+  .country {
+    width: 100vw;
+    padding: 20px 2px;
+    flex-direction: column;
+
+    &__name {
+      font-weight: bold;
+      font-size: 26px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+    &__details {
+      display: inherit;
+      font-size: 18px;
+      &-data {
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

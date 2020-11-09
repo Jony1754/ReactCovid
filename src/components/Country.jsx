@@ -39,6 +39,8 @@ class Country extends Component {
           deaths: deaths.value,
           loading: false,
         });
+      } else {
+        this.setState({ loading: false });
       }
     } catch (err) {
       throw Error(err);
