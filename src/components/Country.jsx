@@ -4,16 +4,13 @@ import recoveredIMG from "../assets/recovered.png";
 import infectedIMG from "../assets/infected.png";
 import deadIMG from "../assets/dead.png";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
+import numberWithCommas from "../utils/numberWithCommas";
 class Country extends Component {
   // name = "Colombia",
   // infected = 3000000,
   // dead = 10000,
   // recovered = 1000,
 
-  numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
   state = {
     confirmed: 0,
     recovered: 0,
@@ -64,21 +61,21 @@ class Country extends Component {
             <img src={infectedIMG} alt="" className="country__details--icon" />
             <p>
               <strong>infected: </strong>
-              {this.numberWithCommas(confirmed)}
+              {numberWithCommas(confirmed)}
             </p>
           </div>
           <div className="country__details-data">
             <img src={deadIMG} alt="" className="country__details--icon" />
             <p>
               <strong>dead: </strong>
-              {this.numberWithCommas(deaths)}
+              {numberWithCommas(deaths)}
             </p>
           </div>
           <div className="country__details-data">
             <img src={recoveredIMG} alt="" className="country__details--icon" />
             <p>
               <strong>recovered: </strong>
-              {this.numberWithCommas(recovered)}
+              {numberWithCommas(recovered)}
             </p>
           </div>
         </div>

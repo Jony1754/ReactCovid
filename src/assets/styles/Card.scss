@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 50px;
+}
+
+.card {
+  width: 150px;
+  height: 8px;
+  border: 1px solid #cecece;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 20px;
+  &-title {
+    font-size: 18px;
+  }
+  &-data {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 412px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.2);
+  }
+}
